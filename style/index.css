@@ -246,3 +246,17 @@ nav>a {
 .box:nth-of-type(10) {
     background-color: dodgerblue;
 }
+.contact-container {
+    text-align: center;
+    width: 100%;
+}
+.contact-container>form>label>p,.contact-container>form>p {
+    margin-top: 16px;
+}
+.contact-container>form>label>input:focus, .contact-container>form>label>textarea:focus, .contact-container>form>p>button:focus {
+    border: 2px dotted green;
+}
+.contact-container>form>label>textarea {
+    width: 50%;
+    height: 200px;
+}
