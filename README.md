@@ -36,13 +36,23 @@ Edit this document to include your answers after each question. Make sure to lea
 
 1. If you were to describe semantic HTML to the next cohort of students, what would you say?
 
+Traditional HTML was used to provide web browsers with basic instructions for how to draw different types of content on the user's display. Within this model, all elements of a given type were seen as the same, and while developers could force browsers to change how those elements were rendered using css, there was little available with the basic markup tags to provide more meaningful structure to documents. This created problems for search engines' bots that crawled the web looking for the main idea on a given page, and for users with disabilities who relied on assistive technology like screen readers. Semeantic HTML solves these problems by giving developers a way to identify the meaning of different parts of their HTML. Clarifying to search engines, screen readers, and other developers that specific chunks of code have specific meaning in the document (e.g., navigational elements, articles, asides, footers, headers, etc).
+
 2. What are the 4 areas of the box model?
+
+from outermost to innermost: margin, border, padding, content
 
 3. While using flexbox, what axis does the following property work on: ```align-items: center```?
 
+cross-axis
+
 4. Explain why git is valuable to a team of developers.
 
+git provides developers with the ability to keep track of all the committed revisions to their code, making it easy to roll-back to a point in time when the code was working if a bug arises that is frustratingly difficult to track down and fix. It also gives developers the ability to create 'branches' of code where new features can be worked on and perfected before being merged into the main body of code, called the 'master' branch. This also allows a team of developers to work on multiple features in multiple branches simultaneously.
+
 5. Define mobile-first design in your own words.
+
+Mobile-first design is the practice of beginning your web page styling process with exclusive focus on making the page attractive and functional on mobile devices. The main reason for this practice is that a majority of users today access websites on their mobile devices, so that design should be the primary design as it will get the most use. Another reason for practicing mobile-first design is that it is usually much easier to make more complex layouts by modifying simple layouts than it is to do the reverse, and it can help encourage more meaningful semantic html layout.
 
 You are expected to be able to answer all these questions. Your responses contribute to your Sprint Challenge grade. Skipping this section *will* prevent you from passing this challenge.
 
