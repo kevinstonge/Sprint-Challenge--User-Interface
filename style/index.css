@@ -52,7 +52,7 @@ table {
 }
 
 html, body {
-    height: 100%;
+    /* height: 100%; */
     font-family: 'Roboto', sans-serif;
 }
 
@@ -67,22 +67,45 @@ p {
 }
 
 .container {
-    width: 800px;
+    max-width: 800px;
     margin: 0 auto;
 }
 
 .top-content {
     display: flex;
+    flex-direction: column;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    margin-bottom: 20px;
+    margin: 20px auto;
     border-bottom: 1px dashed black;
 }
-
-.top-content .text-container {
-    width: 48%;
+.top-content .top-image img {
+    height: 153px;
+    max-width: 100%;
+    object-fit: cover; 
+    object-position: center;
+    margin-bottom: 16px;
+}
+.top-content>.text-container, .bottom-content>.text-container {
+    margin: auto;
+    width: 80%;
     padding: 0 1%;
     padding-bottom: 20px;  
+}
+.bottom-content {
+    display: flex;
+    flex-direction: column;
+}
+@media (min-width: 500px) {
+    .top-content>.text-container {
+        width: 48%;
+    }
+    .bottom-content {
+        flex-direction: row;
+    }
+    .bottom-content>.text-container {
+        width: 30%;
+    }
 }
 
 .middle-content {
@@ -93,54 +116,147 @@ p {
 .middle-content h2 {
     padding: 0 2%;
     margin-bottom: 0;
+    text-align: center;
+}
+@media (min-width: 500px) {
+    .middle-content h2 {
+        text-align: left;
+    }
 }
 
 .middle-content .boxes {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
     justify-content: space-evenly;
 }
+@media (min-width: 500px) {
+    .middle-content>.boxes {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+}
+
 
 .middle-content .boxes .box {
-    width: 12.5%;
+    width: 100px;
     height: 100px;
-    background: black;
     margin: 20px 2.5%;
     color: white;
     display: flex;
     align-items: center;
     justify-content: center;
 }
-
-.bottom-content {
-    display: flex;
-    margin: 0 2% 20px;
-    justify-content: space-around;
-}
-
-.bottom-content .text-container {
-    padding-right: 4%;
-}
-
-.bottom-content .text-container:last-child {
-    padding-right: 0;
+@media (min-width: 500px) {
+    .middle-content>.boxes>.box {
+        width: 12.5%;
+    }
 }
 
 footer {
-    width: 100%;
+    /* width: 100%; */
     background: black;
 }
 
 footer nav {
-    width: 60%;
+    width: 100%;
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
     padding: 20px 2%;
     font-size: 14px;
 }
 
 footer nav a {
+    width: 100%;
     color: white;
     text-decoration: none;
+    padding: 8px 0;
+    text-align: center;
+}
+@media (min-width: 500px) {
+    footer nav {
+        width: 60%;
+    }
+}
+
+nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+nav>img {
+    width: 157px;
+    margin: 10px auto;
+}
+
+nav>a {
+    text-decoration: none;
+    font-size: 20px;
+    color: black;
+    padding: 2px;
+}
+@media (min-width: 500px) {
+    nav { 
+        flex-direction: row;
+        justify-content: space-between; 
+        align-items: center;
+        margin-bottom: 16px;
+    }
+    nav>img {
+        margin: 10px 0;
+    }
+    nav>a {
+        font-size: 16px;
+    }
+    .top-content {
+        flex-direction: row;
+    }
+}
+
+.box:nth-of-type(1) {
+    background-color: teal;
+}
+.box:nth-of-type(2) {
+    background-color: gold;
+}
+.box:nth-of-type(3) {
+    background-color: cadetblue;
+}
+.box:nth-of-type(4) {
+    background-color: coral;
+}
+.box:nth-of-type(5) {
+    background-color: crimson;
+}
+.box:nth-of-type(6) {
+    background-color: forestgreen;
+}
+.box:nth-of-type(7) {
+    background-color: darkorchid;
+}
+.box:nth-of-type(8) {
+    background-color: hotpink;
+}
+.box:nth-of-type(9) {
+    background-color: indigo;
+}
+.box:nth-of-type(10) {
+    background-color: dodgerblue;
+}
+.contact-container {
+    text-align: center;
+    width: 100%;
+}
+.contact-container>form>label>p,.contact-container>form>p {
+    margin-top: 16px;
+}
+.contact-container>form>label>input:focus, .contact-container>form>label>textarea:focus, .contact-container>form>p>button:focus {
+    border: 2px dotted green;
+}
+.contact-container>form>label>textarea {
+    width: 50%;
+    height: 200px;
 }
